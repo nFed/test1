@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>אינג'רה טֶנָּא - חוויה אתיופית אותנטית</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+    
+    :root {
+      --primary-color: #bf4608;
+      --secondary-color: #a93c07;
+      --accent-color: #F39C12;
+      --background-color: #FFF8E1;
+      --text-color: #333;
+      --light-color: #FFF3CD;
+      --whatsapp-color: #25D366;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Rubik', 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #fffaf0, #fff4e6);
+      color: var(--text-color);
+      direction: rtl;
+      line-height: 1.6;
+    }
+    
+    .main-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    
+    .header {
+      background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+      color: white;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+    
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    
+    .header h2 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+    
+    .promo {
+      background-color: var(--light-color);
+      padding: 3rem 1.5rem;
+      text-align: center;
+      color: var(--text-color);
+      border-bottom: 4px solid var(--primary-color);
+    }
+    
+    .promo h3 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    
+    .promo p {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+    .btn {
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    
+    .btn-whatsapp {
+      background-color: var(--whatsapp-color);
+      color: white;
+    }
+    
+    .btn-whatsapp:hover {
+      background-color: #1ebe57;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .content-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      .content-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .features, .pickup-info {
+      background-color: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .features h3, .pickup-info h3 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
+      padding-bottom: 0.8rem;
+    }
+    
+    .features h3:after, .pickup-info h3:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: var(--primary-color);
+    }
+    
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .feature-list li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      padding-right: 1.8rem;
+      position: relative;
+      text-align: right;
+    }
+    
+    .feature-list li:before {
+      content: "✓";
+      color: var(--primary-color);
+      font-weight: bold;
+      position: absolute;
+      right: 0;
+      top: 0.2rem;
+      font-size: 1.2rem;
+    }
+    
+    .pickup-info p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    
+    .map-container {
+      margin-top: 1.5rem;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      flex-grow: 1;
+      min-height: 300px;
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      border: 0;
+    }
+    
+    footer {
+      background: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    
+    footer p {
+      opacity: 0.9;
+    }
+    
+    @media (max-width: 767px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+      
+      .header h2 {
+        font-size: 1.1rem;
+      }
+      
+      .promo h3 {
+        font-size: 1.8rem;
+      }
+      
+      .section {
+        padding: 2rem 1rem;
+      }
+      
+      .btn {
+        width: 100%;
+        margin-bottom: 0.8rem;
+        text-align: center;
+      }
+      
+      .features, .pickup-info {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-wrapper">
+    <div class="header">
+      <h1>אינג'רה טֶנָּא</h1>
+      <h2>חוויה אתיופית אותנטית, אצלכם בצלחת: אינג'רה טרייה ואיכותית</h2>
+    </div>
+
+    <div class="promo">
+      <h3>אינג'רה טרייה ב-₪8 בלבד!</h3>
+      <p>מחיר משתלם – תמיד טרי, תמיד טעים.</p>
+      <p>הזמנות מראש – איסוף עצמי בלבד.</p>
+      <div class="cta-buttons">
+        <a href="tel:0501234567" class="btn btn-primary">הזמנה טלפונית</a>
+        <a href="https://wa.me/9720501234567" class="btn btn-whatsapp">הזמנה בוואטסאפ</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="content-container">
+        <div class="features">
+          <h3>למה לבחור בנו?</h3>
+          <ul class="feature-list">
+            <li><strong>100% טף</strong> – דגן אתיופי עשיר בברזל, סידן וחלבון.</li>
+            <li><strong>מחמצת טבעית</strong> – משפרת עיכול, מעניקה טעם ייחודי ובריא.</li>
+            <li><strong>ללא גלוטן, טבעונית</strong>, וללא חומרים משמרים.</li>
+            <li><strong>מושלמת לאירוח</strong> – מזון אותנטי ואיכותי.</li>
+            <li><strong>טעם ייחודי</strong> – שילוב מושלם של חמיצות קלה ומרקם אוורירי.</li>
+            <li><strong>תהליך מסורתי</strong> – מיוצרת בשיטות מסורתיות מהלב של אתיופיה.</li>
+          </ul>
+        </div>
+        
+        <div class="pickup-info">
+          <h3>פרטי איסוף</h3>
+          <p><strong>כתובת:</strong> הבנים 11, רחובות</p>
+          <p><strong>שעות פעילות:</strong> א'-ה' 10:00-18:00</p>
+          <p><strong>לשאלות:</strong> צרו קשר בוואטסאפ או טלפון ונשמח לעזור!</p>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.3871838582646!2d34.81235!3d31.892002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502a41c30c812b3%3A0x3e45ecbbdb4cd3be!2z15HXqNeV15nXqCDXldeZ15PXlCAxMSwg16jXkNeZ15XXqSwg16jXldeq15wg15LXlNeV15XXqSwg15TXmdeZ15zXmSwg15TXqNeV15XXqNeUINeQ15XXqdeg15jXkQ!5e0!3m2!1siw!2sil!4v1713810000000!5m2!1siw!2sil" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 אינג'רה טֶנָּא. כל הזכויות שמורות.</p>
+    </footer>
+  </div>
+</body>
+</html>
