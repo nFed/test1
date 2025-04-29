@@ -624,7 +624,7 @@
                         
                         <div class="mt-4 mb-3 text-center">
                             <span class="price-highlight">⭐ מחיר השקה: ₪10 בלבד! ⭐</span>
-                            <span class="location-note">איסוף עצמי מרחובות בלבד</span>
+                            <span class="location-note">איסוף עצמי מרחובות בלבד📍</span>
                         </div>
                         
                         <div class="key-features">
@@ -1167,12 +1167,6 @@
                 });
             });
             
-            // Disable pinch zoom on mobile
-            document.addEventListener('touchmove', function(event) {
-                if (event.scale !== 1) {
-                    event.preventDefault();
-                }
-            }, { passive: false });
             
             // Fix responsive issues
             function fixResponsive() {
