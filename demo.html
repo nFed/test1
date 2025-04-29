@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:description" content="אינג'רה טרייה באיסוף עצמי ב־₪10 בלבד! מתכון אתיופי מסורתי, עכשיו אצלכם.">
+    <meta property="og:image" content="logo small-v2.png">
+    <title>אינג'רה טֶנָּא - חוויה אתיופית אותנטית</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary: #EB5E28;
+            --secondary: #F9A03F;
+            --light: #FFF8E6;
+            --dark: #3D2314;
+            --highlight: #5C9E31;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark);
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100%;
+            touch-action: manipulation;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .btn-primary {
+            background-color: var(--highlight);
+            border-color: var(--highlight);
+            padding: 15px 35px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary:hover {
+            background-color: #4A8329;
+            border-color: #4A8329;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-outline-primary {
+            color: white;
+            background-color: rgba(255,255,255,0.1);
+            border: 2px solid white;
+            padding: 15px 35px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            letter-spacing: 0.5px;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: white;
+            color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .highlight-text {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 8px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-scrolled {
+            padding: 5px 0;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link {
+            color: var(--dark) !important;
+            font-weight: 600;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-carousel .carousel-item {
+            height: 100vh;
+            min-height: 600px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-carousel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            border-right: 4px solid var(--highlight);
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle {
+            font-size: 1.7rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .price-highlight {
+            display: inline-block;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            background-color: var(--primary);
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
+        }
+
+        .location-note {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .key-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .key-feature {
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .key-feature i {
+            margin-left: 8px;
+            color: var(--secondary);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Features Section */
+        .features-section {
+            background-color: var(--light);
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            background-color: var(--light);
+            color: var(--primary);
+            border-radius: 50%;
+            font-size: 1.8rem;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Process Section */
+        .process-section {
+            background-color: white;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .process-img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .process-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background-color: var(--light);
+        }
+
+        .gallery-item {
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: white;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .about-content {
+            padding: 30px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--light);
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-left: 15px;
+        }
+        
+        .contact-info h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+        
+        .contact-info p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: var(--light);
+            color: var(--primary);
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: transparent;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .footer-links {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--highlight);
+            padding-right: 5px;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            left: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 24px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .whatsapp-float i {
+            font-size: 24px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 991.98px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+            
+            .key-features {
+                gap: 10px;
+            }
+            
+            .key-feature {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .price-highlight {
+                font-size: 1.5rem;
+            }
+            
+            .location-note {
+                font-size: 1.1rem;
+            }
+
+            .process-step {
+                margin-bottom: 50px;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                left: 20px;
+            }
+            
+            .key-features {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .key-feature {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo small.png" alt="אינג'רה טֶנָּא לוגו" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">גלריה</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">אודותינו</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">צור קשר</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">שאלות נפוצות</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div id="heroCarousel" class="hero-carousel carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url('https://cdn.britannica.com/13/250513-050-1304A5E6/Injera-Ethiopian-bread.jpg')"></div>
+                <div class="carousel-item" style="background-image: url('carousel-item2.jpg')"></div>
+                <div class="carousel-item" style="background-image: url('carousel-item3.jpg')"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="hero-content" data-aos="fade-up">
+                        <h1 class="hero-title mb-4">אינג'רה טֶנָּא</h1>
+                        <p class="hero-subtitle">חוויה אתיופית אותנטית, אצלכם בצלחת</p>
+                        
+                        <div class="mt-4 mb-3 text-center">
+                            <span class="price-highlight">⭐ מחיר השקה: ₪10 בלבד! ⭐</span>
+                            <span class="location-note">איסוף עצמי מרחובות בלבד</span>
+                        </div>
+                        
+                        <div class="key-features">
+                            <span class="key-feature"><i class="bi bi-check-circle-fill"></i> 100% טף אותנטי</span>
+                            <span class="key-feature"><i class="bi bi-check-circle-fill"></i> ללא גלוטן</span>
+                            <span class="key-feature"><i class="bi bi-check-circle-fill"></i> עשיר בברזל וסידן</span>
+                            <span class="key-feature"><i class="bi bi-check-circle-fill"></i> מיוצר בשיטה מסורתית</span>
+                        </div>
+                        
+                        <div class="d-flex flex-wrap justify-content-center gap-4 mt-4">
+                            <a href="https://wa.me/9721234567" class="btn btn-primary">
+                                <i class="bi bi-whatsapp me-2"></i>הזמנה בוואטסאפ
+                            </a>
+                            <a href="tel:+9721234567" class="btn btn-outline-primary">
+                                <i class="bi bi-telephone me-2"></i>הזמנה טלפונית
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3">גלריה</h2>
+                <div class="mx-auto" style="width: 100px; height: 3px; background-color: var(--primary);"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="carousel-item2.jpg" alt="אינג'רה טרייה" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h3>אינג'רה טרייה</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="carousel-item1.jpg" alt="תהליך ההכנה" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h3>תהליך ההכנה</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-item">
+                        <img src="carousel-item3.jpg" alt="שילובים קולינריים" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h3>שילובים קולינריים</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-item">
+                        <img src="carousel-item2.jpg" alt="גרעיני טף" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h3>גרעיני טף</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3">למה האינג'רה שלנו מיוחדת?</h2>
+                <div class="mx-auto" style="width: 100px; height: 3px; background-color: var(--primary);"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-award"></i>
+                        </div>
+                        <h3 class="feature-title">100% טף אותנטי</h3>
+                        <p>האינג'רה שלנו מיוצרת מגרעיני טף מלאים בלבד, ללא תוספות או קמחים אחרים, לטעם מסורתי אמיתי.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3 class="feature-title">ללא גלוטן</h3>
+                        <p>טבעי לחלוטין וללא גלוטן, מתאים לבעלי רגישות לגלוטן ולמי שמחפש אלטרנטיבה בריאה ללחם רגיל.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-heart"></i>
+                        </div>
+                        <h3 class="feature-title">עשיר בערכים תזונתיים</h3>
+                        <p>עשיר בברזל, סידן, חלבון וסיבים תזונתיים. האינג'רה שלנו היא לא רק טעימה, אלא גם מזינה במיוחד.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-hourglass-split"></i>
+                        </div>
+                        <h3 class="feature-title">תסיסה טבעית</h3>
+                        <p>תהליך תסיסה טבעי של לפחות 48 שעות שמעניק לאינג'רה את המרקם האוורירי והטעם החמצמץ המיוחד.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="carousel-item1.jpg" alt="הסיפור שלנו" class="about-img">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-content">
+                        <h2 class="display-5 fw-bold mb-4">מי אנחנו</h2>
+                        <p class="lead mb-4">אנחנו משפחה אתיופית שמביאה אליכם את המסורת והטעמים האותנטיים של אתיופיה.</p>
+                        <p>בשנת 2020 החלטנו להתחיל לשתף את האהבה שלנו לאוכל האתיופי המסורתי. אנחנו מקפידים על תהליכי ייצור מסורתיים ואיכותיים, כדי לספק לכם את חווית האינג'רה האמיתית והטעימה ביותר.</p>
+                        <p>המומחיות שלנו היא באינג'רה - לחם אתיופי מסורתי העשוי מטף, שהוא דגן עתיק ובריא במיוחד. אנחנו משתמשים בטכניקות מסורתיות של תסיסה טבעית ואפייה על מיטאד - מחבת מיוחדת שמעניקה לאינג'רה את המרקם הספוגי והאוורירי המייחד אותה.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3">צור קשר</h2>
+                <div class="mx-auto" style="width: 100px; height: 3px; background-color: var(--primary);"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="p-4 bg-white rounded-3 shadow-sm">
+                        <h3 class="mb-4">פרטי איסוף</h3>
+                        
+                        <div class="d-flex align-items-center contact-info">
+                            <i class="bi bi-geo-alt contact-icon"></i>
+                            <div>
+                                <h5 class="mb-1">כתובת</h5>
+                                <p class="mb-0">הבנים 11, רחובות</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center contact-info">
+                            <i class="bi bi-clock contact-icon"></i>
+                            <div>
+                                <h5 class="mb-1">שעות פעילות</h5>
+                                <p class="mb-0">א'-ה' 10:00-18:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center contact-info">
+                            <i class="bi bi-whatsapp contact-icon"></i>
+                            <div>
+                                <h5 class="mb-1">וואטסאפ</h5>
+                                <p class="mb-0">+972-1234567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center contact-info">
+                            <i class="bi bi-telephone contact-icon"></i>
+                            <div>
+                                <h5 class="mb-1">טלפון</h5>
+                                <p class="mb-0">+972-1234567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <p>לשאלות נוספות או להזמנות מיוחדות, צרו איתנו קשר ונשמח לעזור!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3386.5864014255763!2d34.807843815408714!3d31.896732081246365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502b6409fff61af%3A0xd3efcf250b1638ef!2z15TXkdeg15nXnSAxMSwg16jXl9eV15HXldeq!5e0!3m2!1siw!2sil!4v1619700275511!5m2!1siw!2sil" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3">שאלות נפוצות</h2>
+                <div class="mx-auto" style="width: 100px; height: 3px; background-color: var(--primary);"></div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    איך לאכול אינג'רה בצורה מסורתית?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    באתיופיה, האינג'רה משמשת כצלחת וגם ככלי אכילה. מניחים מאכלים ותבשילים שונים על האינג'רה, וקורעים חתיכות ממנה כדי לאסוף איתן את המאכלים. מומלץ לאכול ביד ימין, כמקובל בתרבות האתיופית.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    מהו טף ומה הערך התזונתי שלו?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    טף הוא דגן עתיק שמקורו באתיופיה, והוא עשיר במיוחד בברזל, סידן, חלבון וסיבים תזונתיים. הוא מכיל גם מגוון ויטמינים ומינרלים חיוניים, והוא דל בשומן. הטף אינו מכיל גלוטן, מה שהופך אותו לחלופה מצוינת עבור בעלי רגישות לגלוטן.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    כמה זמן ניתן לשמור את האינג'רה במקרר?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    ניתן לשמור את האינג'רה במקרר עד 3-4 ימים. לשמירה מיטבית, יש לעטוף אותה היטב בניילון נצמד או בשקית אטומה כדי למנוע התייבשות. ניתן גם להקפיא את האינג'רה לתקופה ארוכה יותר של עד חודש, אך הטעם והמרקם המיטביים הם כשהיא טרייה.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    האם יש תוספות שאתם מציעים לאינג'רה?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    כן, אנו מציעים מגוון מטבלים ותבשילים מסורתיים שמשתלבים נהדר עם האינג'רה. ביניהם: וואט (תבשיל עדשים חריף), שירו (מחית גרגירי חומוס), קיי סיר (תבשיל ירקות) ועוד. לפרטים נוספים ולהזמנות של תוספות, צרו איתנו קשר בוואטסאפ או בטלפון.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    האם ניתן להזמין אינג'רה לאירועים?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    בהחלט! אנו מספקים אינג'רה לאירועים בכל גודל - מארוחות משפחתיות קטנות ועד לאירועים גדולים. מומלץ להזמין מראש, לפחות 48 שעות לפני האירוע. צרו איתנו קשר לתיאום ולקבלת הצעת מחיר מותאמת לדרישות שלכם.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4">אינג'רה טֶנָּא</h4>
+                    <p>חוויה אתיופית אותנטית, אצלכם בצלחת. מייצרים אינג'רה טרייה ואיכותית בשיטות מסורתיות.</p>
+                    <div class="mt-3">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="https://wa.me/9721234567" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4">קישורים מהירים</h4>
+                    <ul class="footer-links">
+                        <li><a href="#gallery">גלריה</a></li>
+                        <li><a href="#about">אודותינו</a></li>
+                        <li><a href="#contact">צור קשר</a></li>
+                        <li><a href="#faq">שאלות נפוצות</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="mb-4">שעות פעילות</h4>
+                    <ul class="footer-links">
+                        <li>ראשון - חמישי: 10:00 - 18:00</li>
+                        <li>שישי: 9:00 - 14:00</li>
+                        <li>שבת: סגור</li>
+                    </ul>
+                    <p class="mt-3">כתובת: הבנים 11, רחובות</p>
+                    <p>טלפון להזמנות: +972-1234567</p>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4" style="background-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 אינג'רה טֶנָּא - כל הזכויות שמורות.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/9721234567" class="whatsapp-float" target="_blank" style="background-color: #25d366;">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap & JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize when document is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Force scroll to top when page loads
+            window.scrollTo(0, 0);
+            
+            // Initialize AOS animations
+            AOS.init({
+                duration: 800,
+                once: true,
+                // Disable AOS on mobile to prevent scroll issues
+                disable: window.innerWidth < 768
+            });
+
+            // Navbar Scroll Effect
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+            
+            // Manual handling of navbar links in mobile
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navLink) {
+                navLink.addEventListener('click', function() {
+                    if (window.innerWidth < 992) {
+                        // Find the toggler button and trigger a click on it to close navbar
+                        document.querySelector('.navbar-toggler').click();
+                    }
+                });
+            });
+            
+            // Disable pinch zoom on mobile
+            document.addEventListener('touchmove', function(event) {
+                if (event.scale !== 1) {
+                    event.preventDefault();
+                }
+            }, { passive: false });
+            
+            // Fix responsive issues
+            function fixResponsive() {
+                if (window.innerWidth <= 767) {
+                    // Adjust hero content on small screens
+                    const heroContent = document.querySelector('.hero-content');
+                    if (heroContent) {
+                        heroContent.style.maxWidth = '95%';
+                    }
+                    
+                    // Fix any scrolling issues
+                    document.body.style.width = '100%';
+                    document.body.style.overflowX = 'hidden';
+                }
+            }
+            
+            // Run on load and resize
+            fixResponsive();
+            window.addEventListener('resize', fixResponsive);
+
+            // Carousel Auto Play
+            const heroCarousel = document.querySelector('#heroCarousel');
+            if (heroCarousel) {
+                const carousel = new bootstrap.Carousel(heroCarousel, {
+                    interval: 5000,
+                    pause: false
+                });
+            }
+        });
+    </script>
+</body>
+</html>
